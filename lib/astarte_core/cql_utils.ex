@@ -129,13 +129,13 @@ defmodule Astarte.Core.CQLUtils do
       :string -> "string_value"
       :binaryblob -> "binaryblob_value"
       :datetime -> "datetime_value"
-      :doublearray -> "doublearray_value"
-      :integerarray -> "integerarray_value"
-      :booleanarray -> "booleanarray_value"
-      :longintegerarray -> "longintegerarray_value"
-      :stringarray -> "stringarray_value"
-      :binaryblobarray -> "binaryblobarray_value"
-      :datetimearray -> "datetimearray_value"
+      :doublearray -> "COALESCE(doublearray_value, [])"
+      :integerarray -> "COALESCE(integerarray_value, [])"
+      :booleanarray -> "COALESCE(booleanarray_value, [])"
+      :longintegerarray -> "COALESCE(longintegerarray_value, [])"
+      :stringarray -> "COALESCE(stringarray_value, [])"
+      :binaryblobarray -> "COALESCE(binaryblobarray_value, [])"
+      :datetimearray -> "COALESCE(datetimearray_value, [])"
     end
   end
 
